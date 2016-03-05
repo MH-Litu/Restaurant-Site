@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>Consegna</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		
+		
+		
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
+		<link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/jquery.raty.css" type="text/css" media="screen" />
+
+	</head>
+	
+	<body>
+	
+		<div class="navbar header_bg" style="margin-bottom:0px;">
+			<div class="container-fluid">
+				<nav class="navbar" role="navigation" style="margin-bottom:0;">
+					<div class="container">
+						<div class="col-md-4 col-sm-6 col-xs-8">
+							<a class="navbar-header navbar-brand img-responsive logo" href="#">
+								<img class="img-responsive" src="images/logo2.png"/>
+							</a>
+						</div>
+									
+						<div class="col-md-8 col-sm-12 col-xs-12" style="padding-top: 5px;">
+							<nav role="navigation" class="navbar navbar-default navbar_top" >
+
+								<div class="navbar-header" style="margin-top: -70px;">
+									<button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle" style="border-color:#fff;">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar" style="background-color:#fff;"></span>
+										<span class="icon-bar" style="background-color:#fff;"></span>
+										<span class="icon-bar" style="background-color:#fff;"></span>
+									</button>
+								</div>
+
+								<div id="myNavbar" class="collapse navbar-collapse top_nav" style="margin-top: 15px;">
+									<nav class="nav_top">
+										<ul class="nav navbar-nav top_nav_block">
+											<li class="active"><a href="index.html">HOME</a></li>
+											<li><a href="gallery.html">GALLERY</a></li>
+											<li><a  href="blog.html">BLOG</a></li>
+											<li><a href="about.html">ABOUT</a></li>
+											<li><a href="contact.html">CONTACT</a></li>
+										</ul>
+
+
+										<ul class="nav navbar-nav navbar-right nav_login">
+											<li><a id="modalClick" href="#" data-toggle="modal" data-target="#loginModal" >
+												<span class="glyphicon glyphicon-log-in"></span> Login</a>
+											</li>
+										</ul>
+									</nav>					
+							
+								</div>
+
+							</nav>
+
+						</div>
+
+					</div>
+				</nav>
+			</div>
+		</div>
+		
+		
+		
+		<div class="container-fluid chilis_change_location">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:15px;">
+					<div class="chilis_main_content_location pull-left">
+						<p>Chilis Restaurants can deliver to you at <span style="color:#fff">Gulshan 1, Dhaka</span></p>
+					</div>
+					<div class="chilis_change_location_button pull-left">
+						<p class="chilis_restaurants_change_location"><a href="" data-toggle="modal" data-target="#showReview" onclick="myFunction2()">Change Location</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="chilis_pages">
+				<ul>
+					<li><a href="index.html"><span style="color:grey">Home</span></a></li>
+					<li><span style="color:grey">></span></li>
+					<li><a href="restaurants.html"><span style="color:grey">Restaurants</span></a></li>
+					<li><span style="color:grey">></span></li>
+					<li><a href="#">Chilis Restaurants</a></li>
+				</ul>
+			</div>
+
+			
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
+				
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-left chilis_restaurants_name">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 pull-left chilis_restaurants_image" style="padding:0px;">
+						<img class="img-responsive" src="images/chilis.jpg" alt=""/>
+					</div>
+				
+					<div class="col-lg-5 col-md-5 col-sm-4 col-xs-12 pull-left chilis_restaurants_items">
+						<h2><a href="#" style="color:#000;">Chilis Restaurants</a></h2>
+						<h4><a href="#" style="color:red;">Pizza, Burger, Snacks, Fries</a></h4>
+						<p>Tasty flavour from organic fed chicken, white sauce</p>
+						<div id="score"></div>
+					</div>
+					
+					<!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left chilis_restaurants_details">
+							<p><img src="images/icons/location-black.png" alt="" />H#06, R#09, Gulhan-1, Dhaka</p>
+					</div>-->
+
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:30px;">
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12  pull-left place_order_content">
+						<div role="tabpanel">
+
+								  <!-- Nav tabs -->
+								  <ul class="nav nav-tabs  nav-justified" role="tablist">
+								    <li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
+								    <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Review</a></li>
+								    <li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+								  </ul>
+
+								  <!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="menu">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+														
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left" style="padding:15px;">
+															<p>Rs. 200.00</p>
+														</div>
+														
+														<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right" style="padding:10px;">
+															<button class="small button">Order</button>
+														</div>
+
+													</div>
+											</div>
+										</div>
+										
+										
+										<div role="tabpanel" class="tab-pane" id="review">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 pull-left" style="padding:5px 0px 0px 10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p><b>John Doe</b></p>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+																<div id="score1"></div> 
+																<a href="#"  data-toggle="modal" data-target="#showReview" onclick="myFunction()">(3 Reviews) </a>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+																												
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right" style="padding:0px;">
+															<button class="small button" data-toggle="modal" data-target="#showReview" onclick="myFunction1()">Add Review</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 place_order_border" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 pull-left" style="padding:5px 0px 0px 10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p><b>John Doe</b></p>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+																<div id="score2"></div> 
+																<a href="#"  data-toggle="modal" data-target="#showReview" onclick="myFunction()">(3 Reviews) </a>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+																												
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right" style="padding:0px;">
+															<button class="small button" data-toggle="modal" data-target="#showReview" onclick="myFunction1()">Add Review</button>
+														</div>
+
+													</div>
+											</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px;">
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="">
+															<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 pull-left" style="padding:5px;">
+																<img src="images/burger.png" alt=""/>
+															</div>
+															<div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 pull-left" style="padding:5px 0px 0px 10px;">
+																<h4 style="color:red;">Original Beef Burger</h4>
+																<p><b>John Doe</b></p>
+																<p>Tasty flavour from organic fed chicken, white sauce</p>
+																<div id="score3"></div> 
+																<a href="#"  data-toggle="modal" data-target="#showReview" onclick="myFunction()">(3 Reviews) </a>
+															</div>
+														</div>
+													</div>
+											
+													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0px;">
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left" style="padding:0px;">
+														</div>
+																												
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right" style="padding:0px;">
+															<button class="small button" data-toggle="modal" data-target="#showReview" onclick="myFunction1()">Add Review</button>
+														</div>
+
+													</div>
+											</div>
+											
+											
+										</div>
+										
+										
+										<div role="tabpanel" class="tab-pane" id="info">
+											
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Chilis_info_heading">
+												<h2>Chilis Restaurants Info</h2>
+												<p><b>Cuisines</b></p>
+												<p>Pizza, Burger, Snacks, Fries</p>
+											
+											</div>
+											
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												
+													<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 pull-left Chilis_info_table">
+													<!--<div class="container">-->
+														
+														<table class="table table-hover ">
+															<thead>
+																<tr>
+																	<th><b>Delivery hours</b></th>
+																	<th></th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Saturday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+																<tr>
+																	<td>Sunday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+																<tr>
+																	<td>Monday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+																<tr>
+																	<td>Tuesday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+																<tr>
+																	<td>Wednesday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+																<tr>
+																	<td>Thursday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+																<tr>
+																	<td>Friday</td>
+																	<td></td>
+																	<td>8:00AM - 11:00PM</td>
+																</tr>
+															</tbody>
+														</table>
+														<!--</div>-->
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 pull-left Chilis_info_delivery">
+																<h4><b>Delivery Fee</b></h4>
+																<p>From Rs. 30.00</p>
+																<h4><b>Pick Up Time</b></h4>
+																<p>35 min</p>
+																<h4><b>Delivery Time</b></h4>
+																<p>1 hr</p>
+													</div>
+											</div>
+											
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Chilis_info_address">
+													<h3 style="margin-top:0px;"><img src="images/icons/location-black.png" alt=""/><b> Address</b></h3>
+													<p>House#6, Road#9, Gulshan-1, Dhaka, Bangladesh</p>
+													<p>Tel: 000-000-000</p>
+												</div>
+												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Chilis_info_payment">
+													<h3 style="margin-top:0px;"><img src="images/icons/action-black.png" alt=""/><b> Payment Types</b></h3>
+													<div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 pull-left Chilis_info_payment_delivery">
+														<ul>
+															<li>Cash on delivery</li>
+															<li>Online payment</li>
+														</ul>
+													</div>
+													<div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 Chilis_info_payment_delivery">
+														<ul>
+															<li><img src="images/hand_cash.png" alt=""/></li>
+															<li><img src="images/master_card.png" alt=""/><img src="images/visa_card.png" alt=""/></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="Chilis_info_others">
+												<h2>Order food online from chilis restaurants with Consegna</h2>
+												<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+											</div>
+											</div>
+										</div>
+											
+											
+									</div>
+						</div>
+					</div>
+			
+
+
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+						<div class="sidebar sidebar_desk">
+							<div class="panel widget order_placement">
+
+									<h4><b>Your Order</b></h4>
+									
+
+									<div style="max-height: 200px; overflow-y: scroll;">
+										<div class="chilis_your_order">
+											<ul class="">
+												<li>
+													Delivery time: 1h
+												</li>
+										
+												<li>
+													Delivery fee:
+													Rs. 60.00
+												</li>
+												
+												<li>
+													Online payment available
+												</li>
+														
+												<li>
+													Delivery min.:
+													Rs. 300.00
+												</li>
+														
+												<li>
+													Accepts Vouchers
+												</li>
+											</ul>
+
+										</div>
+										
+									</div>
+									<br>
+									<button class="small button" style="width:100%;">Proceed to Checkout</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- -Login Modal -->
+			<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content login-modal">
+						<div class="modal-header login-modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title text-center" id="loginModalLabel">USER AUTHENTICATION</h4>
+						</div>
+						<div class="modal-body">
+							<div class="text-center">
+								<div role="tabpanel" class="login-tab">
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a id="signin-taba" href="#home" aria-controls="home" role="tab" data-toggle="tab">Sign In</a></li>
+										<li role="presentation"><a id="signup-taba" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Sign Up</a></li>
+										<li role="presentation"><a id="forgetpass-taba" href="#forget_password" aria-controls="forget_password" role="tab" data-toggle="tab">Forget Password</a></li>
+									</ul>
+								
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active text-center" id="home">
+											&nbsp;&nbsp;
+											<span id="login_fail" class="response_error" style="display: none;">Loggin failed, please try again.</span>
+											<div class="clearfix"></div>
+											<form>
+												<div class="form-group">
+													<div class="input-group">
+														<div class="input-group-addon"><i class="fa fa-user"></i></div>
+														<input type="text" class="form-control" id="remail" placeholder="Email">
+													</div>
+													<span class="help-block has-error" data-error='0' id="remail-error"></span>
+												</div>
+												<div class="form-group">
+													<div class="input-group">
+														<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+														<input type="password" class="form-control" id="password" placeholder="Password">
+													</div>
+													<span class="help-block has-error" id="password-error"></span>
+												</div>
+												<button type="button" id="login_btn" class="btn btn-block bt-login" data-loading-text="Signing In....">Login</button>
+												
+												<div class="login_social_bookmarks">
+													<div class="row">
+														<ul>
+															<li> or Log in via</li>
+															<li class="fb_icon"><a href="www.facebook.com/consegna"><img src="images/fb.png" alt=""/></a></li>
+															<li class="g_icon"><a href="www.google-plus.com/consegna"><img src="images/g+.png" alt=""/></a></li>
+														</ul>
+													</div>
+														
+												</div>
+
+												<div class="clearfix"></div>
+																										
+												<div class="login-modal-footer">
+													<div class="row">
+														<div class="col-xs-8 col-sm-8 col-md-8">
+															<i class="fa fa-lock"></i>
+															<a href="javascript:;" class="forgetpass-tab"> Forgot password? </a>
+														
+														</div>
+														
+														<div class="col-xs-4 col-sm-4 col-md-4">
+															<i class="fa fa-check"></i>
+															<a href="javascript:;" class="signup-tab"> Sign Up </a>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="profile">
+											&nbsp;&nbsp;
+											<span id="registration_fail" class="response_error" style="display: none;">Registration failed, please try again.</span>
+											<div class="clearfix"></div>
+											<form>
+
+												<div class="form-group">
+													<div class="input-group">
+														<div class="input-group-addon"><i class="fa fa-user"></i></div>
+														<input type="text" class="form-control" id="remail" placeholder="Email">
+													</div>
+													<span class="help-block has-error" data-error='0' id="remail-error"></span>
+												</div>
+												<div class="form-group">
+													<div class="input-group">
+														<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+														<input type="password" class="form-control" id="password" placeholder="Password">
+													</div>
+													<span class="help-block has-error" id="password-error"></span>
+												</div>
+												<div class="form-group">
+													<div class="input-group">
+														<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+														<input type="password" class="form-control" id="password" placeholder="Confirm Password">
+													</div>
+													<span class="help-block has-error" id="password-error"></span>
+												</div>
+												<button type="button" id="register_btn" class="btn btn-block bt-login" data-loading-text="Registering....">Register</button>
+												
+												<div class="login_social_bookmarks">
+													<div class="row">
+														<ul>
+															<li> or Sign up via</li>
+															<li class="fb_icon"><a href="www.facebook.com/consegna"><img src="images/fb.png" alt=""/></a></li>
+															<li class="g_icon"><a href="www.google-plus.com/consegna"><img src="images/g+.png" alt=""/></a></li>
+														</ul>
+													</div>
+														
+												</div>
+												<div class="clearfix"></div>
+												<div class="login-modal-footer">
+													<div class="row">
+														<div class="col-xs-8 col-sm-8 col-md-8">
+															<i class="fa fa-lock"></i>
+															<a href="javascript:;" class="forgetpass-tab"> Forgot password? </a>
+														
+														</div>
+														
+														<div class="col-xs-4 col-sm-4 col-md-4">
+															<i class="fa fa-check"></i>
+															<a href="javascript:;" class="signin-tab"> Sign In </a>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div role="tabpanel" class="tab-pane text-center" id="forget_password">
+											&nbsp;&nbsp;
+											<span id="reset_fail" class="response_error" style="display: none;"></span>
+												<div class="clearfix"></div>
+												<form>
+													<div class="form-group">
+														<div class="input-group">
+															<div class="input-group-addon"><i class="fa fa-user"></i></div>
+															<input type="text" class="form-control" id="femail" placeholder="Email">
+														</div>
+														<span class="help-block has-error" data-error='0' id="femail-error"></span>
+													</div>
+													
+													<button type="button" id="reset_btn" class="btn btn-block bt-login" data-loading-text="Please wait....">Forget Password</button>
+													<div class="clearfix"></div>
+													<div class="login-modal-footer">
+														<div class="row">
+															<div class="col-xs-6 col-sm-6 col-md-6">
+																<i class="fa fa-lock"></i>
+																<a href="javascript:;" class="signin-tab"> Sign In </a>
+															
+															</div>
+															
+															<div class="col-xs-6 col-sm-6 col-md-6">
+																<i class="fa fa-check"></i>
+																<a href="javascript:;" class="signup-tab"> Sign Up </a>
+															</div>
+														</div>
+													</div>
+												</form>
+										</div>
+									</div>
+								</div>
+									
+							</div>
+						</div>
+							
+					</div>
+				</div>
+			</div>
+			<!-- - Login Model Ends Here -->
+			
+			<!--  Footer -->
+			<div class="container-fluid footer_area" style="margin-top:30px;">
+				<div class="container">
+					<div class="row footer">
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-left footer_contents fix">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left fix">
+								<ul class="footer_contents_left">
+									 <li><a href="#"><b><u>POPULAR CITIES</u></b></a></li>
+									 <li><a href="#">CHINA</a></li>
+									 <li><a href="#">INDIA</a></li>
+									 <li><a href="#">MALYASIA</a></li>
+									 <li><a href="#">BANGLADESH</a></li>
+									 <li><a href="#">SRILANKA</a></li>
+								</ul>
+						   </div>
+						   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left fix">
+								<ul class="footer_contents_mid">
+									 <li><a href="#"><b><u>POPULAR CUISINES</u></b></a></li>
+									 <li><a href="#">CHINESE</a></li>
+									 <li><a href="#">THAI</a></li>
+									 <li><a href="#">INDIAN</a></li>
+									 <li><a href="#">ITALIAN</a></li>
+									 <li><a href="#">BANGLADESHI</a></li>
+								</ul>
+						   </div>
+						   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left fix">
+								<ul class="footer_contents_right">
+									 <li><a href="#"><b><u>RESTAURANTS</u></b></a></li>
+									 <li><a href="#">CHINA</a></li>
+									 <li><a href="#">INDIA</a></li>
+									 <li><a href="#">MALYASIA</a></li>
+									 <li><a href="#">BANGLADESH</a></li>
+									 <li><a href="#">SRILANKA</a></li>
+								</ul>
+						   </div>
+						</div>
+				  
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 footer_menu">
+						    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<ul>
+									 <li><a href="index.html">HOME</a></li>
+									 <li><a href="gallery.html">GALLERY</a></li>
+									 <li><a href="blog.html">BLOG</a></li>
+									 <li><a href="about.html">ABOUT</a></li>
+									 <li><a href="contact.html">CONTACT</a></li>
+								</ul>
+						    </div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:10px;padding-right:0px;">
+								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 leftright" style="padding-top:5px;padding-right:15px;">
+									<input class="form-control" placeholder="Your email address" type="text"> 
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="padding-left:0px;padding-top:5px;">	
+									<button class="btn btn-success pull-left">SUBSCRIBE </button>
+								</div>
+
+							</div>
+							
+							<div class="social_bookmarks fix">
+							<a href="www.twitter.com/consegna"><i class="fa fa-twitter"></i></a>
+							<a href="www.facebook.com/consegna"><i class="fa fa-facebook"></i></a>
+							<a href="www.youtube.com/consegna"><i class="fa fa-youtube"></i></a>
+							<a href="www.pinterest.com/consegna"><i class="fa fa-pinterest-p"></i></a>
+							<a href="www.google.com/consegna"><i class="fa fa-google"></i></a>
+						</div>
+						</div>
+				  
+				  
+						
+					</div>
+     
+				</div>
+     
+			</div>
+			<div class="container-fluid copyright_area">
+				<div class="container">
+					<div class="copyright floatright">
+						<p>&copy; 2015 CONSEGNA | All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Footer End -->
+
+
+
+
+
+
+
+<!-- Show Review -->
+
+<div class="modal fade" id="showReview" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content login-modal">
+      		<div class="modal-header login-modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title text-center" id="modalTitle">Review</h4>
+      		</div>
+      		<div class="modal-body">
+      			<div class="container-fluid" id="allReview">
+		            <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12 review_bottom text-center" >
+		              	<p>I like this food. This food is very much tasty. I love this food. (Bilash)</p>
+		              </div>
+		              
+		            </div>
+		             <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12 review_bottom text-center">
+		              	<p>I like this food. This food is very much tasty. I love this food. (Bilash)</p>
+		              </div>
+		              
+		            </div>
+		             <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12 review_bottom text-center">
+		              	<p>I like this food. This food is very much tasty. I love this food. (Bilash)</p>
+		              </div>
+		              
+		            </div>
+		             <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12 review_bottom review_none text-center">
+		              	<p>I like this food. This food is very much tasty. I love this food. (Bilash)</p>
+		              </div>
+		              
+		            </div>
+		        </div>
+
+
+		        <div class="container-fluid" id="addingReview">
+		            <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12  text-center" >
+		              	<label>Please Rate this food :</label>
+		              	<div id="ratingadd"></div> 
+		              </div>
+		              
+		            </div>
+		            <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12  text-center" >
+		              	<label>Please Write your Comment : </label> 
+		                <textarea class="input-xlarge col-md-12 form-control" id="message" name="message"
+		                rows="10">
+						</textarea>
+		              </div>
+		              <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:15px;">
+		              		<button class="small button pull-right">Submit Review</button>
+		              </div>
+		              
+		            </div>
+
+		             
+		        </div>
+
+
+
+
+
+
+		        <!-- change location -->
+		        <div class="container-fluid" id="changeLocation">
+		            <div class="row">
+		              	<div class="col-md-12">
+		              		
+						    <input class="form-control" placeholder="Change Location" type="text">
+
+		              	</div>
+		              	<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:15px;">
+		              		<button class="small button pull-right">Search Location</button>
+		              	</div>
+		            </div> 
+		        </div>
+	      		
+	    	</div>
+	   </div>
+ 	</div>
+ 	<!-- - Show Review Ends Here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+			
+			<script src="js/index.js"></script>
+			<script src="js/jquery_responsive_nav.js"></script>
+			
+			<script src="js/jquery.js">	</script>
+			<script src="js/bootstrap.js">	</script>
+			<script src="js/dropdown.js">	</script>
+			<script type="text/javascript" src="js/jquery.raty.js"></script>
+			<script type="text/javascript">
+				$("#score").raty({ score: 3 });
+				$("#score1").raty({ score: 4 });
+				$("#score2").raty({ score: 3 });
+				$("#score3").raty({ score: 2 });
+				$("#score4").raty({ score: 5 });
+				$("#score5").raty({ score: 0 });
+				$("#ratingadd").raty({ score: 0 });
+
+
+				function myFunction(){
+					$("#allReview").show();
+					$("#addingReview").hide();
+					$("#changeLocation").hide();
+				}
+				function myFunction1(){
+					$("#allReview").hide();
+					$("#changeLocation").hide();
+					$("#addingReview").show();
+				}
+
+				function myFunction2(){
+					$("#allReview").hide();
+					$("#addingReview").hide();
+					$("#changeLocation").show();
+
+					$("#modalTitle").text("Change Location");
+				}
+
+			</script>
+  
+
+	</body>
+	
+</html>	
