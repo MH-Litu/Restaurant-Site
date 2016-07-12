@@ -1,3 +1,3 @@
 # Restaurant-Site
 
-Responsive Web Design Live Here: http://mh-litu.github.io/Restaurant-Site
+Responsive Web Design Live Here: http://litu173.github.io/Restaurant-Site
